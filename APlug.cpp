@@ -455,7 +455,7 @@ void APlug::speedupEstimationHistogram(int minWorkers , int maxWorkers, int step
 	double parallelTime;
 	//~ for ( int workers = 50; workers < MAX_NUM_WORKERS; workers+=50)
 	//~ for ( int workers = 1; workers < MAX_NUM_WORKERS; ((workers != 1)? workers *= 2: workers = step))  
-	for ( int workers = minWorkers; workers < maxWorkers; workers++)  
+        for ( int workers = minWorkers; workers <= maxWorkers; workers += step)
 	{		
 		double core[workers];
 		double coreSum[workers];
@@ -546,7 +546,7 @@ void APlug::speedupEstimationGamma(int minWorkers , int maxWorkers, int step )
 	double parallelTime;
 	//~ for ( int workers = 50; workers < MAX_NUM_WORKERS; workers+=50)
 	//~ for ( int workers = 1; workers < MAX_NUM_WORKERS; ((workers != 1)? workers *= 2: workers = step))  
-	for ( int workers = minWorkers; workers < maxWorkers; workers++)  
+        for ( int workers = minWorkers; workers <= maxWorkers; workers += step)
 	{		
 		double core[workers];
 		double coreSum[workers];
