@@ -46,7 +46,15 @@ Adaptive Parallelism for Scientific Applications
 		comma seperated values [NumberOfWorkers, TasksPerWorker, ParallelTime, SpeedupEfficiency]
 		
 	B-	"histogram.csv" 
-		[BucketNumber, TasksInBucket, StartTimeOfBucket, MiddleOfBucket]
-		note that you may also set the granularity of the buckets using the class member function setBucketsGranularity(num)
+[BucketNumber, TasksInBucket, StartTimeOfBucket, MiddleOfBucket]
+note that you may also set the granularity of the buckets using the class member function setBucketsGranularity(num)
+
+5- Graphical Interface:
+        A-      Build the GUI by running: make gui
+                This creates an executable named APlugGUI (Qt is required).
+        B-      Run ./APlugGUI and fill in the form fields:
+                number of tasks, sample size, sample file path,
+                minimum workers, maximum workers and step size.
+                Press "Run" to display recommendations and statistics.
 
 
